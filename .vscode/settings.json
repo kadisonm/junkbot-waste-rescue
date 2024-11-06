@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "junkbot-waste-rescue.sln"
+    "dotnet.defaultSolution": "junkbot-waste-rescue.sln",
+    "dotnet.preferCSharpExtension": true
 }
