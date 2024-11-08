@@ -22,7 +22,7 @@ public abstract class Composite : Node
     } 
 }
 
-public abstract class Sequence : Composite
+public class Sequence : Composite
 {
     public Sequence(List<Node> children) : base(children) {} 
 
@@ -47,7 +47,7 @@ public abstract class Sequence : Composite
     }
 }
 
-public abstract class Selector : Composite
+public class Selector : Composite
 {
     public Selector(List<Node> children) : base(children) {} 
 
