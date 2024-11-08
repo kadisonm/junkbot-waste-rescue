@@ -15,6 +15,7 @@ public class ObjectSpawner : MonoBehaviour
         {
             Rigidbody body = item.GetComponent<Rigidbody>();
             body.useGravity = true;
+            item.tag = "Item";
             item = null;
         }
 
