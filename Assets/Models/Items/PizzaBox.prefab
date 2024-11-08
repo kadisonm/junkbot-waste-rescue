@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3340311267447010733}
   - component: {fileID: -1600190984833528729}
   - component: {fileID: -1730040163831518323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PizzaBox
-  m_TagString: Untagged
+  m_TagString: Rubbish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,8 +56,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -145,6 +145,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c21d6349e0536c944ba8be602723a630, type: 2}
+    - target: {fileID: -4513873640138408310, guid: a35b15972dc46da4ea97f56748165ad6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -3133999818167067184, guid: a35b15972dc46da4ea97f56748165ad6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -154,6 +159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mesh_Pizzabox
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a35b15972dc46da4ea97f56748165ad6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
