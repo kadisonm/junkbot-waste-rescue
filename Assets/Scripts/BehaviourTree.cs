@@ -24,28 +24,29 @@ public abstract class Composite : Node
 
 public class Sequence : Composite
 {
-    public Sequence(List<Node> children) : base(children) {} 
+    private int currentChild = 0;
 
-    public override NodeState Evaluate() 
-    { 
-        foreach(Node child in children) 
+    public Sequence(List<Node> children) : base(children) {}
+
+    public override NodeState Evaluate()
+    {
+        for (; currentChild < children.Count; currentChild++)
         {
-            NodeState childState = child.Evaluate();
-
-            if (childState == NodeState.RUNNING) 
-            { 
-                return NodeState.RUNNING; 
-            } 
-
-            if (childState == NodeState.FAILURE) 
-            { 
-                return NodeState.FAILURE; 
-            } 
+            switch(children[currentChild].Evaluate())
+            {
+                case NodeState.RUNNING:
+                    return NodeState.RUNNING;
+                case NodeState.FAILURE:
+                    currentChild = 0;
+                    return NodeState.FAILURE;
+            }
         }
 
-        return NodeState.SUCCESS; 
+        currentChild = 0;
+        return NodeState.SUCCESS;
     }
 }
+
 
 public class Selector : Composite
 {
@@ -84,7 +85,7 @@ public class Leaf : Node
     } 
     
     public override NodeState Evaluate() 
-    { 
+    {
         return _action(); 
     } 
 }
