@@ -82,6 +82,7 @@ public class Leaf : Node
     { 
         _action = action; 
     } 
+    
     public override NodeState Evaluate() 
     { 
         return _action(); 

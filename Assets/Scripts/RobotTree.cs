@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class RobotTree : MonoBehaviour
 {
-    private BehaviorTree _tree = new BehaviorTree(new Sequence(new List<Node> {
-        
+    Animator _animator;
+
+    private BehaviorTree _tree;
+
+    void Awake()
+    {
+        _animator = GetComponent<Animator>();
+
+        _tree = new BehaviorTree(new Selector(new List<Node> {
+        new Sequence(new List<Node> {
+
+        }),
+        new Leaf(delegate() 
+        {
+            return NodeState.SUCCESS;
+        })
     }));
+    }
 
     void Update()
     {
