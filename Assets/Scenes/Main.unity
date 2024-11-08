@@ -279,7 +279,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 17112001}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1342812114}
+        m_TargetAssemblyTypeName: ObjectSpawner, Assembly-CSharp
+        m_MethodName: SpawnItem
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PizzaBox
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &17112001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,7 +979,6 @@ GameObject:
   - component: {fileID: 330585546}
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
-  - component: {fileID: 330585547}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1049,18 +1060,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 16.927, y: 0, z: 0}
---- !u!114 &330585547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &331879359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1221,7 +1220,6 @@ GameObject:
   m_Component:
   - component: {fileID: 410087041}
   - component: {fileID: 410087040}
-  - component: {fileID: 410087042}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1306,18 +1304,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &410087042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410087039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &418220340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2725,7 +2711,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 723839886}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1342812114}
+        m_TargetAssemblyTypeName: ObjectSpawner, Assembly-CSharp
+        m_MethodName: SpawnItem
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Container
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &723839886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4248,7 +4246,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1275093799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1342812114}
+        m_TargetAssemblyTypeName: ObjectSpawner, Assembly-CSharp
+        m_MethodName: SpawnItem
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TrashBag
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1275093799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4391,10 +4401,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7e449b3b787644c8b9a40181ee76f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hamburger: {fileID: 0}
-  _trashBag: {fileID: 0}
-  _pizzaBox: {fileID: 0}
-  _container: {fileID: 0}
+  _hamburger: {fileID: 3530075412286363286, guid: ea42ac65316ea7549ad82c30a845911f,
+    type: 3}
+  _trashBag: {fileID: 4474382198320302150, guid: 9cd1746789b311d4c9e0add4969236f1,
+    type: 3}
+  _pizzaBox: {fileID: 22648899321674013, guid: 6b33774543b7deb4988a0676e64e21fb, type: 3}
+  _container: {fileID: 461692670688170993, guid: d3887f0097534cc4baf4263f1b8093ff,
+    type: 3}
 --- !u!4 &1342812115
 Transform:
   m_ObjectHideFlags: 0
@@ -4404,7 +4417,7 @@ Transform:
   m_GameObject: {fileID: 1342812113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9485257, y: 0.39031315, z: 0.6752415}
+  m_LocalPosition: {x: -0.1, y: 1.171, z: -3.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5477,14 +5490,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1342812114}
         m_TargetAssemblyTypeName: ObjectSpawner, Assembly-CSharp
-        m_MethodName: SpawnHamburger
+        m_MethodName: SpawnItem
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Hamburger
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1777064484
